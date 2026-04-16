@@ -175,8 +175,8 @@ cd
 mkdir krakensdr
 cd krakensdr
 
-git clone https://github.com/krakenrf/heimdall_daq_fw
-cd heimdall_daq_fw
+https://github.com/lyeshammadi-lab/heimdall_daq_/edit/main/heimdall_daq_data_saver
+cd heimdall_daq_data_saver
 ```
 
 7. Build Heimdall C files
@@ -184,7 +184,7 @@ cd heimdall_daq_fw
 Browse to the _daq_core folder
 
 ```
-cd ~/krakensdr/heimdall_daq_fw/Firmware/_daq_core/
+cd ~/krakensdr/heimdall_daq_data_saver/Firmware/_daq_core/
 ```
 
 Copy librtlsdr library and includes to the _daq_core folder
@@ -231,14 +231,9 @@ Now you will probably want to install the direction of arrival DSP code found in
 ### Test Run:
 The data acquisition chain can be started by simply running the 'daq_start_sm.sh' script in sudo mode.
 ```bash
-cd ~/krakensdr/heimdall_daq_fw
+cd ~/krakensdr/heimdall_daq_data_saver
 sudo ./daq_start_sm.sh
 ```
-
-In order to start the system in simulation mode run the 'daq_synthetic_start.sh' script in sudo mode.
-```bash
-cd ~/krakensdr/heimdall_daq_fw
-sudo ./daq_synthetic_start.sh
 ```
 
 Prior to the system startup set parameters of the required operation mode in the 'daq_chain_config.ini'.
