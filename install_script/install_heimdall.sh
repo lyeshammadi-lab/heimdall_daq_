@@ -12,7 +12,15 @@ echo "========================================"
 echo " 1. Mise à jour et dépendances de base"
 echo "========================================"
 sudo apt-update
-sudo apt-get install -y build-essential git cmake libusb-1.0-0-dev lsof libzmq3-dev pigpio
+sudo apt-get install -y build-essential git cmake libusb-1.0-0-dev lsof libzmq3-dev unzip wget
+
+cd $HOME
+wget https://github.com/joan2937/pigpio/archive/master.zip
+unzip -q master.zip
+rm master.zip
+cd pigpio-master
+make -j4
+sudo make install
 
 echo "========================================"
 echo " 2. Installation du driver RTL-SDR custom"
